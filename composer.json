@@ -1,0 +1,76 @@
+{
+    "name": "preemstudio/laravel-character-builder",
+    "description": "A package to easily compose characters from various bits and pieces.",
+    "keywords": [
+        "PreemStudio",
+        "laravel",
+        "laravel-character-builder"
+    ],
+    "homepage": "https://github.com/preemstudio/laravel-character-builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "brian@preem.studio",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "endroid/qr-code": "^4.7",
+        "illuminate/contracts": "*",
+        "illuminate/support": "*",
+        "intervention/image": "^2.7",
+        "ksubileau/color-thief-php": "^2.0",
+        "spatie/laravel-package-tools": "^1.14"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.29",
+        "graham-campbell/analyzer": "^3.1",
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "spatie/laravel-ray": "^1.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "PreemStudio\\CharacterBuilder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PreemStudio\\CharacterBuilder\\CharacterBuilderServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
