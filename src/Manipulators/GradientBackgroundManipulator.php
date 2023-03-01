@@ -11,7 +11,7 @@ use PreemStudio\CharacterBuilder\Path;
 
 class GradientBackgroundManipulator implements Manipulator
 {
-    public function __construct(private array $colors)
+    public function __construct(private array $colors, private string $direction)
     {
         //
     }
@@ -82,7 +82,7 @@ class GradientBackgroundManipulator implements Manipulator
             hexdec(substr($this->colors[1], 4, 2)),
         ];
 
-        $steps = $configuration['gradient'] === 'horizontal' ? $y1 - $y : $x1 - $x;
+        $steps = $this->direction === 'horizontal' ? $y1 - $y : $x1 - $x;
 
         for ($i = 0; $i < $steps; $i++) {
             $r = intval($s[0] - ((($s[0] - $e[0]) / $steps) * $i));
@@ -91,7 +91,7 @@ class GradientBackgroundManipulator implements Manipulator
 
             $color = imagecolorallocate($image, $r, $g, $b);
 
-            if ($configuration['gradient'] === 'vertical') {
+            if ($this->direction === 'vertical') {
                 imagefilledrectangle($image, $x + $i, $y, $x1 + $i + 1, $y1, $color);
             }
 
