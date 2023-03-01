@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.1.2 - 2023-03-01
+
+- [Scope direction to specific manipulators](https://github.com/PreemStudio/laravel-character-builder/commit/04c779930ef8667c0d984e0a5c0a705421d10e67)
+
 ## 1.1.1 - 2023-03-01
 
 [Scope colors to specific manipulators](https://github.com/PreemStudio/laravel-character-builder/commit/5e183e88fedd32aa115f7af557af3555eb824c1a)
