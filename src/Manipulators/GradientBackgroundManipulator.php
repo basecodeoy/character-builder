@@ -11,6 +11,11 @@ use PreemStudio\CharacterBuilder\Path;
 
 class GradientBackgroundManipulator implements Manipulator
 {
+    public function __construct(private array $colors)
+    {
+        //
+    }
+
     public function manipulate(string $seed, array $configuration, Image $backgroundImage): Image
     {
         $this->createGradient($seed, $configuration);
@@ -23,7 +28,7 @@ class GradientBackgroundManipulator implements Manipulator
         $tempFile = Path::characters("{$seed}/temp.png");
 
         Intervention::canvas($configuration['width'], $configuration['height'])->save($tempFile);
-        $this->getRandomColors($configuration);
+        $this->getRandomColors();
         $this->makeGradient($configuration, $image = imagecreatefrompng($tempFile));
 
         unlink($tempFile);
@@ -46,13 +51,13 @@ class GradientBackgroundManipulator implements Manipulator
         return $values;
     }
 
-    private function getRandomColors(array $configuration): void
+    private function getRandomColors(): void
     {
-        $indexes = $this->generateRandomSeededIndexes($configuration['colors']);
+        $indexes = $this->generateRandomSeededIndexes($this->colors);
 
-        $configuration['colors'] = [
-            substr($configuration['colors'][$indexes[0]], 1),
-            substr($configuration['colors'][$indexes[1]], 1),
+        $this->colors = [
+            substr($this->colors[$indexes[0]], 1),
+            substr($this->colors[$indexes[1]], 1),
         ];
     }
 
@@ -66,15 +71,15 @@ class GradientBackgroundManipulator implements Manipulator
         }
 
         $s = [
-            hexdec(substr($configuration['colors'][0], 0, 2)),
-            hexdec(substr($configuration['colors'][0], 2, 2)),
-            hexdec(substr($configuration['colors'][0], 4, 2)),
+            hexdec(substr($this->colors[0], 0, 2)),
+            hexdec(substr($this->colors[0], 2, 2)),
+            hexdec(substr($this->colors[0], 4, 2)),
         ];
 
         $e = [
-            hexdec(substr($configuration['colors'][1], 0, 2)),
-            hexdec(substr($configuration['colors'][1], 2, 2)),
-            hexdec(substr($configuration['colors'][1], 4, 2)),
+            hexdec(substr($this->colors[1], 0, 2)),
+            hexdec(substr($this->colors[1], 2, 2)),
+            hexdec(substr($this->colors[1], 4, 2)),
         ];
 
         $steps = $configuration['gradient'] === 'horizontal' ? $y1 - $y : $x1 - $x;

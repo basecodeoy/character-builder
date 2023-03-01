@@ -12,12 +12,17 @@ use PreemStudio\CharacterBuilder\Path;
 
 class RandomBackgroundManipulator implements Manipulator
 {
+    public function __construct(private array $colors)
+    {
+        //
+    }
+
     public function manipulate(string $seed, array $configuration, Image $backgroundImage): Image
     {
         return Intervention::canvas(
             $configuration['width'],
             $configuration['height'],
-            Arr::random($configuration['colors'])
+            Arr::random($this->colors)
         )->save(Path::characters("{$seed}/background.png"));
     }
 }
