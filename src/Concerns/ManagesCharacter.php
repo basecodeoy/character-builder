@@ -19,6 +19,6 @@ trait ManagesCharacter
             $image->insert(File::get(Arr::random(File::files(Path::parts($part)))->getPathname()));
         }
 
-        $image->save($this->files['character']);
+        $image->save(Path::characters("{$this->identifier}.png"));
     }
 }
