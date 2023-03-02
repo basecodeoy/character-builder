@@ -5,22 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 1.1.3 - 2023-03-01
+## [Unreleased]
 
-- [Make QR Code positioning configurable](https://github.com/PreemStudio/laravel-character-builder/commit/fc92c5894fc59d221853dcb4ed728602e5858606)
 
-## 1.1.2 - 2023-03-01
+## [1.1.3] - 2023-03-01
+### Changed
+- make QR Code positioning configurable
 
-- [Scope direction to specific manipulators](https://github.com/PreemStudio/laravel-character-builder/commit/04c779930ef8667c0d984e0a5c0a705421d10e67)
 
-## 1.1.1 - 2023-03-01
+## [1.1.2] - 2023-03-01
+### Changed
+- scope direction to specific manipulators
 
-[Scope colors to specific manipulators](https://github.com/PreemStudio/laravel-character-builder/commit/5e183e88fedd32aa115f7af557af3555eb824c1a)
 
-## 1.1.0 - 2023-03-01
+## [1.1.1] - 2023-03-01
+### Changed
+- scope colors to specific manipulators
 
-- [Replace utility functions with Manipulator classes](https://github.com/PreemStudio/laravel-character-builder/commit/2f45c70dca9198cbe0a66bf225db1e236682b71f)
+
+## [1.1.0] - 2023-03-01
+### Changed
+- replace utility functions with `Manipulator` classes
+
 
 ## 1.0.0 - 2023-02-08
 
-Initial Release
+[Unreleased]: https://github.com/PreemStudio/laravel-character-builder/compare/1.1.3...HEAD
+[1.1.3]: https://github.com/PreemStudio/laravel-character-builder/compare/1.1.2...1.1.3
+[1.1.2]: https://github.com/PreemStudio/laravel-character-builder/compare/1.1.1...1.1.2
+[1.1.1]: https://github.com/PreemStudio/laravel-character-builder/compare/1.1.0...1.1.1
+[1.1.0]: https://github.com/PreemStudio/laravel-character-builder/compare/1.0.0...1.1.0
