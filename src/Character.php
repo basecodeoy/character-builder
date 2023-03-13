@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use RuntimeException;
 
-class Character
+final class Character
 {
     use Concerns\ManagesCharacter;
     use Concerns\ManagesConfiguration;

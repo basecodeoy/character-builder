@@ -9,7 +9,7 @@ use Intervention\Image\Image;
 use PreemStudio\CharacterBuilder\Contracts\Manipulator;
 use PreemStudio\CharacterBuilder\Path;
 
-class GradientBackgroundManipulator implements Manipulator
+final class GradientBackgroundManipulator implements Manipulator
 {
     public function __construct(private array $colors, private string $direction)
     {

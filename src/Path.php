@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PreemStudio\CharacterBuilder;
 
-class Path
+final class Path
 {
     public static function parts(string $child): string
     {

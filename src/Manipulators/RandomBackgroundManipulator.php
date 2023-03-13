@@ -10,7 +10,7 @@ use Intervention\Image\Image;
 use PreemStudio\CharacterBuilder\Contracts\Manipulator;
 use PreemStudio\CharacterBuilder\Path;
 
-class RandomBackgroundManipulator implements Manipulator
+final class RandomBackgroundManipulator implements Manipulator
 {
     public function __construct(private array $colors)
     {

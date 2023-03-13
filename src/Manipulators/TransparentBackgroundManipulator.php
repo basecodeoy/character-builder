@@ -9,7 +9,7 @@ use Intervention\Image\Image;
 use PreemStudio\CharacterBuilder\Contracts\Manipulator;
 use PreemStudio\CharacterBuilder\Path;
 
-class TransparentBackgroundManipulator implements Manipulator
+final class TransparentBackgroundManipulator implements Manipulator
 {
     public function manipulate(string $seed, array $configuration, Image $backgroundImage): Image
     {

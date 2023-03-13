@@ -10,7 +10,7 @@ use Intervention\Image\Image;
 use PreemStudio\CharacterBuilder\Contracts\Manipulator;
 use PreemStudio\CharacterBuilder\Path;
 
-class DominantBackgroundManipulator implements Manipulator
+final class DominantBackgroundManipulator implements Manipulator
 {
     public function manipulate(string $seed, array $configuration, Image $backgroundImage): Image
     {

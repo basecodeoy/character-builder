@@ -11,7 +11,7 @@ use Intervention\Image\Image;
 use PreemStudio\CharacterBuilder\Contracts\Manipulator;
 use PreemStudio\CharacterBuilder\Path;
 
-class QrCodeManipulator implements Manipulator
+final class QrCodeManipulator implements Manipulator
 {
     public function __construct(
         private QrCode $image,
