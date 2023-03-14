@@ -61,7 +61,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PreemStudio\\CharacterBuilder\\CharacterBuilderServiceProvider"
+                "PreemStudio\\CharacterBuilder\\ServiceProvider"
             ]
         }
     },

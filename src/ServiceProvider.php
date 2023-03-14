@@ -6,7 +6,7 @@ namespace PreemStudio\CharacterBuilder;
 
 use PreemStudio\Jetpack\Package\AbstractServiceProvider;
 
-final class CharacterBuilderServiceProvider extends AbstractServiceProvider
+final class ServiceProvider extends AbstractServiceProvider
 {
     //
 }
