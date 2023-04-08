@@ -9,15 +9,15 @@ use PreemStudio\CharacterBuilder\Contracts\Manipulator;
 trait ManagesConfiguration
 {
     private array $config = [
-        'height'       => 512,
-        'width'        => 512,
+        'height' => 512,
+        'width' => 512,
         'manipulators' => [
             'before' => [
-                'character'  => [],
+                'character' => [],
                 'background' => [],
             ],
             'after' => [
-                'character'  => [],
+                'character' => [],
                 'background' => [],
             ],
         ],
@@ -25,7 +25,7 @@ trait ManagesConfiguration
 
     public function withSize(int $size): self
     {
-        $this->config['width']  = $size;
+        $this->config['width'] = $size;
         $this->config['height'] = $size;
 
         return $this;

@@ -17,11 +17,11 @@ final class Character
 
     public function __construct(string $identifier)
     {
-        mt_srand(crc32($identifier));
+        \mt_srand(\crc32($identifier));
 
         $this->identifier = $identifier;
 
-        File::ensureDirectoryExists(Path::characters("{$identifier}"), 0777);
+        File::ensureDirectoryExists(Path::characters("{$identifier}"), 0o777);
     }
 
     public function create(): \Intervention\Image\Image
@@ -40,7 +40,7 @@ final class Character
             $backgroundImage = $manipulator->manipulate($this->identifier, $this->config, $backgroundImage);
         }
 
-        if (! isset($backgroundImage)) {
+        if (!isset($backgroundImage)) {
             throw new RuntimeException('Background Image is undefined');
         }
 
@@ -54,7 +54,7 @@ final class Character
             $manipulator->manipulate($this->identifier, $this->config, $backgroundImage);
         }
 
-        unlink(Path::characters("{$this->identifier}/background.png"));
+        \unlink(Path::characters("{$this->identifier}/background.png"));
 
         return $backgroundImage->save(Path::characters("{$this->identifier}.png"));
     }

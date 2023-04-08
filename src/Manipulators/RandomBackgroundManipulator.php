@@ -22,7 +22,7 @@ final class RandomBackgroundManipulator implements Manipulator
         return Intervention::canvas(
             $configuration['width'],
             $configuration['height'],
-            Arr::random($this->colors)
+            Arr::random($this->colors),
         )->save(Path::characters("{$seed}/background.png"));
     }
 }

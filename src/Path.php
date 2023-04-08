@@ -11,7 +11,7 @@ final class Path
         $path = config('character-builder.paths.parts');
 
         if ($child) {
-            return $path.DIRECTORY_SEPARATOR.$child;
+            return $path.\DIRECTORY_SEPARATOR.$child;
         }
 
         return $path;
@@ -22,7 +22,7 @@ final class Path
         $path = config('character-builder.paths.characters');
 
         if ($child) {
-            return $path.DIRECTORY_SEPARATOR.$child;
+            return $path.\DIRECTORY_SEPARATOR.$child;
         }
 
         return $path;

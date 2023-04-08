@@ -17,7 +17,7 @@ final class DominantBackgroundManipulator implements Manipulator
         return Intervention::canvas(
             $configuration['width'],
             $configuration['height'],
-            ColorThief::getColor(Path::characters("{$seed}.png"))
+            ColorThief::getColor(Path::characters("{$seed}.png")),
         )->save(Path::characters("{$seed}/background.png"));
     }
 }

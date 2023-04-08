@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 return [
-
     'paths' => [
-        'parts'      => resource_path('parts'),
+        'parts' => resource_path('parts'),
         'characters' => storage_path('app/characters'),
     ],
 
@@ -17,5 +16,4 @@ return [
         'legs',
         'pants',
     ],
-
 ];
