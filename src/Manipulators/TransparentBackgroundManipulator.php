@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\CharacterBuilder\Manipulators;
 
-use Intervention\Image\Facades\Image as Intervention;
-use Intervention\Image\Image;
 use BombenProdukt\CharacterBuilder\Contracts\Manipulator;
 use BombenProdukt\CharacterBuilder\Path;
+use Intervention\Image\Facades\Image as Intervention;
+use Intervention\Image\Image;
 
 final class TransparentBackgroundManipulator implements Manipulator
 {

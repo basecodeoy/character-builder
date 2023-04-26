@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\CharacterBuilder\Concerns;
 
+use BombenProdukt\CharacterBuilder\Path;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
-use BombenProdukt\CharacterBuilder\Path;
 
 trait ManagesCharacter
 {

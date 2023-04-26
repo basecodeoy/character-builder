@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\CharacterBuilder\Manipulators;
 
+use BombenProdukt\CharacterBuilder\Contracts\Manipulator;
+use BombenProdukt\CharacterBuilder\Path;
 use ColorThief\ColorThief;
 use Intervention\Image\Facades\Image as Intervention;
 use Intervention\Image\Image;
-use BombenProdukt\CharacterBuilder\Contracts\Manipulator;
-use BombenProdukt\CharacterBuilder\Path;
 
 final class DominantBackgroundManipulator implements Manipulator
 {

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace BombenProdukt\CharacterBuilder\Manipulators;
 
+use BombenProdukt\CharacterBuilder\Contracts\Manipulator;
+use BombenProdukt\CharacterBuilder\Path;
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
 use Intervention\Image\Facades\Image as Intervention;
 use Intervention\Image\Image;
-use BombenProdukt\CharacterBuilder\Contracts\Manipulator;
-use BombenProdukt\CharacterBuilder\Path;
 
 final class QrCodeManipulator implements Manipulator
 {
