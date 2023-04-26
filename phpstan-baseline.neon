@@ -1,0 +1,46 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Character.php
+
+		-
+			message: "#^Cannot call method getPathname\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Character.php
+
+		-
+			message: "#^Parameter \\#1 \\$child of static method BombenProdukt\\\\CharacterBuilder\\\\Path\\:\\:parts\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Character.php
+
+		-
+			message: "#^Property BombenProdukt\\\\CharacterBuilder\\\\Character\\:\\:\\$identifier has no type specified\\.$#"
+			count: 1
+			path: src/Character.php
+
+		-
+			message: "#^Method BombenProdukt\\\\CharacterBuilder\\\\Manipulators\\\\GradientBackgroundManipulator\\:\\:makeGradient\\(\\) has parameter \\$image with no type specified\\.$#"
+			count: 1
+			path: src/Manipulators/GradientBackgroundManipulator.php
+
+		-
+			message: "#^Parameter \\#1 \\$image of function imagepng expects GdImage, GdImage\\|false given\\.$#"
+			count: 1
+			path: src/Manipulators/GradientBackgroundManipulator.php
+
+		-
+			message: "#^Parameter \\#6 \\$color of function imagefilledrectangle expects int, int\\|false given\\.$#"
+			count: 2
+			path: src/Manipulators/GradientBackgroundManipulator.php
+
+		-
+			message: "#^Method BombenProdukt\\\\CharacterBuilder\\\\Path\\:\\:characters\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Path.php
+
+		-
+			message: "#^Method BombenProdukt\\\\CharacterBuilder\\\\Path\\:\\:parts\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Path.php
