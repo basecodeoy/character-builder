@@ -14,7 +14,7 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/BombenProdukt/laravel-character-builder",
+    "homepage": "https://github.com/faustbrian/laravel-character-builder",
     "require": {
         "php": "^8.2",
         "endroid/qr-code": "^4.7",
