@@ -21,7 +21,7 @@
         "endroid/qr-code": "^4.8.5",
         "illuminate/contracts": "^11.0",
         "illuminate/support": "^11.0",
-        "intervention/image": "^2.7.2",
+        "intervention/image": "^3.9.1",
         "ksubileau/color-thief-php": "^2.0.1"
     },
     "require-dev": {
