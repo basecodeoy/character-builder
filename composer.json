@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.3",
         "basecodeoy/laravel-package-powerpack": "^1.0.0",
-        "endroid/qr-code": "^4.8.5",
+        "endroid/qr-code": "^6.0.3",
         "illuminate/contracts": "^11.0",
         "illuminate/support": "^11.0",
         "intervention/image": "^2.7.2",
