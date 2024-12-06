@@ -1,0 +1,67 @@
+{
+    "name": "basecodeoy/laravel-character-builder",
+    "description": "A package to easily compose characters from various bits and pieces.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "BaseCode Oy",
+        "laravel",
+        "laravel-character-builder"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/basecodeoy/laravel-character-builder",
+    "support": {
+        "issues": "https://github.com/basecodeoy/laravel-character-builder/issues",
+        "source": "https://github.com/basecodeoy/laravel-character-builder",
+        "security": "https://github.com/basecodeoy/laravel-character-builder/blob/main/.github/SECURITY.md"
+    },
+    "require": {
+        "php": "^8.3",
+        "ext-gd": "*",
+        "ext-mbstring": "*",
+        "basecodeoy/crate": "^1.0.0",
+        "endroid/qr-code": "^4.8.5",
+        "illuminate/contracts": "^11.0",
+        "illuminate/support": "^11.0",
+        "intervention/image": "^2.7.2",
+        "ksubileau/color-thief-php": "^2.0.1"
+    },
+    "require-dev": {
+        "basecodeoy/standards": "^1.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BaseCodeOy\\CharacterBuilder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        },
+        "audit": {
+            "abandoned": "report"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BaseCodeOy\\CharacterBuilder\\ServiceProvider"
+            ]
+        }
+    }
+}
